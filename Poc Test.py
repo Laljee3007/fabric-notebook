@@ -16,3 +16,4 @@ df = spark.read.format("csv").option("header","true").option("delimiter", "\t").
 display(df)
 df.createOrReplaceGlobalTempView('df')
 
+select count(*) from df
